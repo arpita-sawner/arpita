@@ -1,0 +1,80 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f7fb;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #585680;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0;
+}
+
+/* Main container */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sections - Box Model */
+section {
+    background-color: white;
+    border: 2px solid #a7b8eb;
+    border-radius: 12px;
+
+    /* Box model */
+    padding: 25px;
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: #6561b9;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Hobbies */
+.hobbies ul {
+    padding-left: 25px;
+    margin: 0;
+}
+
+.hobbies li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #92add3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
