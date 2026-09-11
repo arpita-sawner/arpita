@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Buttons</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #text {
+            font-size: 24px;
+            margin: 30px;
+        }
+
+        button, select {
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .bold:hover {
+            font-weight: bold;
+        }
+
+        .italic:hover {
+            font-style: italic;
+        }
+
+        .underline:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Interactive Text Editor</h1>
+
+    <p id="text">This is my interactive text.</p>
+
+    <!-- Change Color -->
+    <h3>Text Color</h3>
+    <button onclick="changeColor('red')">RED</button>
+    <button onclick="changeColor('green')">GREEN</button>
+    <button onclick="changeColor('blue')">BLUE</button>
+
+    <br><br>
+
+    <!-- Font Family -->
+    <h3>Font Family</h3>
+    <select onchange="changeFont(this.value)">
+        <option value="Arial">Arial</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Times New Roman">Times New Roman</option>
+    </select>
+
+    <br><br>
+
+    <!-- Font Size -->
+    <h3>Font Size</h3>
+    <button onclick="increaseSize()">A+</button>
+    <button onclick="decreaseSize()">A-</button>
+
+    <br><br>
+
+    <!-- Font Style -->
+    <h3>Font Style</h3>
+    <button class="bold" onmouseover="makeBold()">Bold</button>
+    <button class="italic" onmouseover="makeItalic()">Italic</button>
+    <button class="underline" onmouseover="makeUnderline()">Underline</button>
+
+    <script>
+        let text = document.getElementById("text");
+        let fontSize = 24;
+
+        // Change text color
+        function changeColor(color) {
+            text.style.color = color;
+        }
+
+        // Change font family
+        function changeFont(font) {
+            text.style.fontFamily = font;
+        }
+
+        // Increase font size
+        function increaseSize() {
+            fontSize += 2;
+            text.style.fontSize = fontSize + "px";
+        }
+
+        // Decrease font size
+        function decreaseSize() {
+            if (fontSize > 10) {
+                fontSize -= 2;
+                text.style.fontSize = fontSize + "px";
+            }
+        }
+
+        // Bold on mouseover
+        function makeBold() {
+            text.style.fontWeight = "bold";
+        }
+
+        // Italic on mouseover
+        function makeItalic() {
+            text.style.fontStyle = "italic";
+        }
+
+        // Underline on mouseover
+        function makeUnderline() {
+            text.style.textDecoration = "underline";
+        }
+    </script>
+
+</body>
+</html>
