@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive 3-Section Layout</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .box {
+      flex: 1;
+      padding: 40px;
+      text-align: center;
+      background-color: #5582a0;
+      color: rgb(167, 165, 165);
+      border-radius: 5px;
+    }
+
+    /* Desktop */
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="box">
+      <h2>Section 1</h2>
+      <p>Content for section one.</p>
+    </div>
+
+    <div class="box">
+      <h2>Section 2</h2>
+      <p>Content for section two.</p>
+    </div>
+
+    <div class="box">
+      <h2>Section 3</h2>
+      <p>Content for section three.</p>
+    </div>
+  </div>
+
+</body>
+</html>
